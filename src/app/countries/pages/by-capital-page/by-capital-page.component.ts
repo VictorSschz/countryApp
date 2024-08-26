@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { SearchBoxComponent } from '../../../shared/components/search-box/search-box.component';
 
 @Component({
   selector: 'app-by-capital-page',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styles: ``
 })
 export class ByCapitalPageComponent {
+
+  searchByCapital(term:string):void{
+    console.log('Desde CapitalByPage');
+    console.log({term});
+  }
 
 }
