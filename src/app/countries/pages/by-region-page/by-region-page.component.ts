@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CountriesService } from '../../services/countries.service';
-import { Country } from '../../interfaces/country';
-
-type Continente = 'Europa'| 'Asia'| 'America'| 'Oceania'| 'Africa';
+import { Country } from '../../interfaces/country.interface';
+import { Continente } from '../../interfaces/region.type';
 
 @Component({
   selector: 'app-by-region-page',
