@@ -19,7 +19,6 @@ export class CountriesService {
     )
   }
 
-
   searchCountryByAlphaCode(code:string):Observable<Country | null>{
 
     const url = `${this.apiUrl}/alpha/${code}`;
@@ -29,9 +28,7 @@ export class CountriesService {
       map(countries => countries.length > 0 ? countries[0] : null ),
       catchError(()=>of(null))
   );
-
   }
-
 
   searchCapital(term:string): Observable<Country[]>{
 
