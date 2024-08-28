@@ -10,15 +10,16 @@ import { CacheStore } from '../../interfaces/cache-store.interface';
 })
 export class ByCapitalPageComponent implements OnInit{
 
-  public countries: Country[]=[];
+  public countries:     Country[]=[];
+  public isLoading:     boolean = false;
+  public initialValue:  string = '';
 
-  public isLoading = false;
 
   constructor(private CountriesService:CountriesService){}
 
-
   ngOnInit(): void {
     this.countries = this.CountriesService.cacheStore.byCapital.countries;
+    this.initialValue = this.CountriesService.cacheStore.byCapital.term;
   }
 
   searchByCapital(term :string):void{
